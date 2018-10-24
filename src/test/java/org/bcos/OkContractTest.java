@@ -39,9 +39,7 @@ public class OkContractTest {
             System.out.println("####create credential succ, begin deploy contract");
 
             	Ok okDemo = Ok.deploy(web3j, credentials, gasPrice, gasLimit, initialWeiValue).get(60000, TimeUnit.MILLISECONDS);
-          //  Ok okDemo = Ok.load("0x61dba250334e0fd5804c71e7cbe79eabecef8abe", web3j, credentials, gasPrice, gasLimit);
             if (okDemo != null) {
-
                 System.out.println("####contract address is: " + okDemo.getContractAddress());
                 System.out.println("####contract  is: " + okDemo.isValid());
                 TransactionReceipt receipt = okDemo.trans(new Uint256(4)).get(60000, TimeUnit.MILLISECONDS);

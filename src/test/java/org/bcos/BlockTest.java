@@ -11,7 +11,10 @@ import org.bcos.web3j.protocol.core.methods.response.EthBlock;
 import org.bcos.web3j.protocol.core.methods.response.TransactionReceipt;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
 
 import java.io.IOException;
 import java.math.BigInteger;
@@ -19,7 +22,8 @@ import java.util.concurrent.TimeUnit;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
-
+@RunWith(SpringRunner.class)
+@SpringBootTest(classes = Application.class)
 public class BlockTest {
 
     private static BigInteger gasPrice = new BigInteger("300000000");
@@ -48,7 +52,7 @@ public class BlockTest {
     @Test
     public void getBlockNumber() throws IOException {
         EthBlock.Block block=  web3j.ethGetBlockByNumber(DefaultBlockParameter.valueOf(new BigInteger("1")), true).send().getBlock();
-       assertEquals( block.getNonce(),0);
+       assertEquals( block.getNonce(),new BigInteger("0"));
         assertTrue( block.getNumber().intValue()>0);
     }
     @Test
