@@ -1,1 +1,7 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=org.web3j.spring.autoconfigure.Web3jAutoConfiguration
+# Auto Configure
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+org.bcos.autoconfigure.ChannelConnectionsConfig,\
+org.bcos.autoconfigure.EncryptTypeConfig,\
+org.bcos.autoconfigure.ExecutorConfig,\
+org.bcos.autoconfigure.ServiceConfig,\
+org.bcos.autoconfigure.ToolConfig

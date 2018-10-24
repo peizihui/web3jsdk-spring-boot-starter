@@ -1,9 +1,9 @@
-package org.web3j.spring.actuate;
+package org.bcos.actuate;
 
+import org.bcos.web3j.protocol.Web3j;
 import org.springframework.boot.actuate.health.AbstractHealthIndicator;
 import org.springframework.boot.actuate.health.Health;
 import org.springframework.util.Assert;
-import org.web3j.protocol.Web3j;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,25 +31,10 @@ public class Web3jHealthIndicator extends AbstractHealthIndicator {
                 builder.up();
                 List<CompletableFuture> futures = new ArrayList<>();
 
-                futures.add(web3j.netVersion()
-                        .sendAsync()
-                        .thenApply(netVersion ->
-                                builder.withDetail("netVersion", netVersion.getNetVersion())));
-
-                futures.add(web3j.web3ClientVersion()
-                        .sendAsync()
-                        .thenApply(web3ClientVersion ->
-                                builder.withDetail("clientVersion", web3ClientVersion.getWeb3ClientVersion())));
-
                 futures.add(web3j.ethBlockNumber()
                         .sendAsync()
                         .thenApply(ethBlockNumber ->
                                 builder.withDetail("blockNumber", ethBlockNumber.getBlockNumber())));
-
-                futures.add(web3j.ethProtocolVersion()
-                        .sendAsync()
-                        .thenApply(ethProtocolVersion ->
-                                builder.withDetail("protocolVersion", ethProtocolVersion.getProtocolVersion())));
 
                 futures.add(web3j.netPeerCount()
                         .sendAsync()
