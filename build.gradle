@@ -1,9 +1,16 @@
 buildscript {
     repositories {
         mavenCentral()
+        jcenter()
+
+    }
+    dependencies {
+        classpath 'com.github.jengelman.gradle.plugins:shadow:1.2.4'
     }
 }
 
+
+apply plugin: 'com.github.johnrengelman.shadow'
 apply plugin: 'java'
 apply plugin: 'jacoco'
 apply plugin: 'maven'
@@ -27,6 +34,18 @@ repositories {
     mavenCentral()
 }
 
+
+
+shadowJar {
+    dependencies {
+        include(dependency('org.springframework.boot:spring-boot-autoconfigure:$springBootVersion'))
+        include(dependency("org.springframework.boot:spring-boot-actuator:$springBootVersion"))
+        include(dependency("org.springframework.boot:spring-boot-configuration-processor:$springBootVersion"))
+
+    }
+}
+
+
 dependencies {
     compile files('libs/web3sdk.jar')
     compile "org.springframework.boot:spring-boot-autoconfigure:$springBootVersion",
@@ -37,7 +56,7 @@ dependencies {
     }
 
     compile 'io.netty:netty-all:4.1.15.Final'
-    compile 'io.netty:netty-tcnative:2.0.17.Final'
+    compile 'io.netty:netty-tcnative:2.0.18.Final'
     compile	 'com.alibaba:fastjson:1.2.29'
     compile ('com.fasterxml.jackson.core:jackson-databind:2.9.6')
     compile ('com.fasterxml.jackson.core:jackson-annotations:2.9.6')
