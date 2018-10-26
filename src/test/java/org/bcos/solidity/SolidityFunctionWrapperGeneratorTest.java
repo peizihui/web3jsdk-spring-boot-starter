@@ -16,24 +16,25 @@ public class SolidityFunctionWrapperGeneratorTest  {
     protected String tempDirPath =  new File("src/test/java/").getAbsolutePath();;
     protected String packageName =  "org.bcos";
 
+
     @Test
-    public void generateClassFromABI() throws Exception {
+    public void generateClassFromABIForHelloWorld() throws Exception {
+
+        String binFile1 =  new ClassPathResource("abi/HelloWorld.bin").getFile().getAbsolutePath();
+        String abiFile1 =  new ClassPathResource("abi/HelloWorld.abi").getFile().getAbsolutePath();
         SolidityFunctionWrapperGenerator.main(Arrays.asList(
-                binFile,
-                abiFile,
+                binFile1,
+                abiFile1,
                 "-p", packageName,
                 "-o", tempDirPath
         ).toArray(new String[0]));
     }
 
     @Test
-    public void generateClassFromABIForHelloWorld() throws Exception {
-
-         String binFile1 =  new ClassPathResource("abi/HelloWorld.bin").getFile().getAbsolutePath();
-         String abiFile1 =  new ClassPathResource("abi/HelloWorld.abi").getFile().getAbsolutePath();
+    public void generateClassFromABI() throws Exception {
         SolidityFunctionWrapperGenerator.main(Arrays.asList(
-                binFile1,
-                abiFile1,
+                binFile,
+                abiFile,
                 "-p", packageName,
                 "-o", tempDirPath
         ).toArray(new String[0]));
