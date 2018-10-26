@@ -1,6 +1,5 @@
 package org.bcos.solidity;
 
-import org.bcos.TempFileProvider;
 import org.bcos.web3j.codegen.SolidityFunctionWrapperGenerator;
 import org.junit.Test;
 import org.springframework.core.io.ClassPathResource;
@@ -11,17 +10,17 @@ import java.util.Arrays;
 
 public class SolidityFunctionWrapperGeneratorTest  {
 
-    private String binFile =  new ClassPathResource("abi/greeter/build/Greeter.bin").getFile().getAbsolutePath();
-    private String abiFile =  new ClassPathResource("abi/greeter/build/Greeter.abi").getFile().getAbsolutePath();
+    private String binFile =  new ClassPathResource("solidity/greeter/build/Greeter.bin").getFile().getAbsolutePath();
+    private String abiFile =  new ClassPathResource("solidity/greeter/build/Greeter.abi").getFile().getAbsolutePath();
     protected String tempDirPath =  new File("src/test/java/").getAbsolutePath();;
-    protected String packageName =  "org.bcos";
+    protected String packageName =  "org.bcos.solidity";
 
 
     @Test
     public void generateClassFromABIForHelloWorld() throws Exception {
 
-        String binFile1 =  new ClassPathResource("abi/HelloWorld.bin").getFile().getAbsolutePath();
-        String abiFile1 =  new ClassPathResource("abi/HelloWorld.abi").getFile().getAbsolutePath();
+        String binFile1 =  new ClassPathResource("solidity/HelloWorld.bin").getFile().getAbsolutePath();
+        String abiFile1 =  new ClassPathResource("solidity/HelloWorld.abi").getFile().getAbsolutePath();
         SolidityFunctionWrapperGenerator.main(Arrays.asList(
                 binFile1,
                 abiFile1,
@@ -31,7 +30,7 @@ public class SolidityFunctionWrapperGeneratorTest  {
     }
 
     @Test
-    public void generateClassFromABI() throws Exception {
+    public void generateClassFromABIForGreeter() throws Exception {
         SolidityFunctionWrapperGenerator.main(Arrays.asList(
                 binFile,
                 abiFile,
