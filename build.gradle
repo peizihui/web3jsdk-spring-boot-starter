@@ -36,14 +36,14 @@ repositories {
 
 
 
-shadowJar {
-    dependencies {
-        include(dependency('org.springframework.boot:spring-boot-autoconfigure:$springBootVersion'))
-        include(dependency("org.springframework.boot:spring-boot-actuator:$springBootVersion"))
-        include(dependency("org.springframework.boot:spring-boot-configuration-processor:$springBootVersion"))
-
-    }
-}
+//shadowJar {
+//    dependencies {
+//        include(dependency('org.springframework.boot:spring-boot-autoconfigure:$springBootVersion'))
+//        include(dependency("org.springframework.boot:spring-boot-actuator:$springBootVersion"))
+//        include(dependency("org.springframework.boot:spring-boot-configuration-processor:$springBootVersion"))
+//
+//    }
+//}
 
 
 dependencies {

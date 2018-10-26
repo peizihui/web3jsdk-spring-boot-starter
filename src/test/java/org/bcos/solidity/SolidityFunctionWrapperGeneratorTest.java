@@ -12,7 +12,7 @@ public class SolidityFunctionWrapperGeneratorTest  {
 
     private String binFile =  new ClassPathResource("solidity/greeter/build/Greeter.bin").getFile().getAbsolutePath();
     private String abiFile =  new ClassPathResource("solidity/greeter/build/Greeter.abi").getFile().getAbsolutePath();
-    protected String tempDirPath =  new File("src/test/java/").getAbsolutePath();;
+    protected String tempDirPath =  new File("src/test/java/").getAbsolutePath();
     protected String packageName =  "org.bcos.solidity";
 
 
