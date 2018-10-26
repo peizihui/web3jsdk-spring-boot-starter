@@ -1,6 +1,6 @@
 logging:
   level:
-    org.bcos: INFO
+    org.bcos: DEBUG
 taskexecutor:
   core-pool-size: 50
   max-pool-size: 100
