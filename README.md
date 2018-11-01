@@ -2,11 +2,7 @@
 
 - 如果您对wec3sdk项目还不太了解，请查看[https://github.com/FISCO-BCOS/web3sdk](https://github.com/FISCO-BCOS/web3sdk)。
 
- - 您可以拉代码直接在此项目开发。或者使用
-
-     ```gradle clean shadowJar``` 
-
-    在build/libs下生成的web3sdk-spring-boot-starter-1.2.4-all.jar引入您的项目，这样您不必引入spring boot相关依赖； 
+- 您可以拉代码直接在此项目开发(删除test文件下的测试案例即可)。我们在test下面提供基本测试案例，保证你能成功调用智能合约。
 
     开始开发前，您需要配置 application.yml。配置参考FISCO-BCOS web3sdk项目[https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/web3sdk/config_web3sdk.html](https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/web3sdk/config_web3sdk.html)。 
 
