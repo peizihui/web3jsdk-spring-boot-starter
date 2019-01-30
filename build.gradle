@@ -5,20 +5,20 @@ buildscript {
 
     }
     dependencies {
-        classpath 'com.github.jengelman.gradle.plugins:shadow:1.2.4'
+//        classpath 'com.github.jengelman.gradle.plugins:shadow:1.2.4'
         classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.14.RELEASE")
     }
 }
 
 
-apply plugin: 'com.github.johnrengelman.shadow'
+//apply plugin: 'com.github.johnrengelman.shadow'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'java'
 apply plugin: 'jacoco'
 apply plugin: 'maven'
 apply plugin: 'idea'
 
-group 'org.bcos'
+group 'org.fisco.bcos'
 version '1.2.4'
 
 sourceCompatibility = 1.8
@@ -29,15 +29,13 @@ ext {
 }
 
 repositories {
-    maven {
-        url "http://maven.aliyun.com/nexus/content/groups/public/"
-    }
-
+    maven { url "https://dl.bintray.com/ethereum/maven/" }
     mavenCentral()
 }
 
 dependencies {
-    compile files('libs/web3sdk.jar')
+    compile ('org.fisco-bcos:web3sdk:2.0.1')
+    compile 	'org.projectlombok:lombok:1.16.20'
     compile "org.springframework.boot:spring-boot-autoconfigure",
             "org.springframework.boot:spring-boot-actuator",
             "org.springframework.boot:spring-boot-configuration-processor",
@@ -45,17 +43,6 @@ dependencies {
         exclude module: 'commons-logging'
     }
 
-    compile 'io.netty:netty-all:4.1.15.Final'
-    compile 'io.netty:netty-tcnative:2.0.18.Final'
-    compile	 'com.alibaba:fastjson:1.2.29'
-    compile ('com.fasterxml.jackson.core:jackson-databind:2.9.6')
-    compile ('com.fasterxml.jackson.core:jackson-annotations:2.9.6')
-    compile 'org.apache.httpcomponents:httpclient:4.5.5',
-            'org.bouncycastle:bcprov-jdk15on:1.54',
-            'com.lambdaworks:scrypt:1.4.0',
-            'com.squareup:javapoet:1.7.0',
-            'io.reactivex:rxjava:1.2.4',
-            'com.github.jnr:jnr-unixsocket:0.15'
     testCompile 'junit:junit:4.12',
             "org.springframework.boot:spring-boot-starter-test"
 }

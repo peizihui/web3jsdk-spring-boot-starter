@@ -19,7 +19,12 @@ channelConnections:
   clientKeystorePath: classpath:client.keystore
   keystorePassWord: 123456
   clientCertPassWord: 123456
-  connectionsStr: node0@10.107.105.141:9821
+  groupAndConnectstr:
+    - groupId: 1
+      connectionsStr: 10.107.105.141:9821
+    - groupId: 2
+      connectionsStr: 10.107.105.141:9821
+
 # 配置国密算法开启/关闭开关(默认为0)
 encryptType: 0
 logging:

@@ -1,7 +1,7 @@
 # Auto Configure
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-org.bcos.autoconfigure.ChannelConnectionsConfig,\
-org.bcos.autoconfigure.EncryptTypeConfig,\
+ChannelConnectionsConfig,\
+EncryptTypeConfig,\
 org.bcos.autoconfigure.ExecutorConfig,\
-org.bcos.autoconfigure.ServiceConfig,\
+ServiceConfig,\
 org.bcos.autoconfigure.ToolConfig
