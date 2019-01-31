@@ -17,13 +17,6 @@ public class Application {
         SpringApplication.run(Application.class, args);
     }
 
-
-    //if you need
-//  @Bean
-//    public Server getServer(ThreadPoolTaskExecutor executor,ChannelConnections channelConnections) {
-//        return new Server(executor,channelConnections);
-//  }
-
     @Bean
     public Web3j getWeb3j(Service service) throws Exception {
         ChannelEthereumService channelEthereumService = new ChannelEthereumService();

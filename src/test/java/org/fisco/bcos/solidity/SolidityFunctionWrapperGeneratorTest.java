@@ -10,8 +10,6 @@ import java.util.Arrays;
 
 public class SolidityFunctionWrapperGeneratorTest  {
 
-    private String binFile =  new ClassPathResource("solidity/greeter/build/Greeter.bin").getFile().getAbsolutePath();
-    private String abiFile =  new ClassPathResource("solidity/greeter/build/Greeter.abi").getFile().getAbsolutePath();
     protected String tempDirPath =  new File("src/test/java/").getAbsolutePath();
     protected String packageName =  "org.fisco.bcos.solidity";
 
@@ -29,15 +27,6 @@ public class SolidityFunctionWrapperGeneratorTest  {
         ).toArray(new String[0]));
     }
 
-    @Test
-    public void generateClassFromABIForGreeter() throws Exception {
-        SolidityFunctionWrapperGenerator.main(Arrays.asList(
-                binFile,
-                abiFile,
-                "-p", packageName,
-                "-o", tempDirPath
-        ).toArray(new String[0]));
-    }
 
     public SolidityFunctionWrapperGeneratorTest() throws IOException {
     }
