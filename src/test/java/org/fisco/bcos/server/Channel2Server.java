@@ -23,8 +23,6 @@ public class Channel2Server {
 
 		
 		String topic = "topic";
-
-		
 		List<String> topics = new ArrayList<String>();
 		topics.add(topic);
 		service.setTopics(topics);

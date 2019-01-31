@@ -1,32 +1,14 @@
-taskexecutor:
-  core-pool-size: 50
-  max-pool-size: 100
-  queue-capacity: 500
-  keep-alive-seconds: 60
-# 系统代理合约地址，GOD账号配置
-toolconf:
-  systemProxyAddress: 0x4b54936265f4c693f06c0af56b10357463d36896
-  privKey: b83261efa42895c38c6c2364ca878f43e77f3cddbc922bf57d0d48070f79feb6
-  account: 0x148947262ec5e21739fe3a931c29e8b84ee34a0f
-  outPutpath: ./output/
 service:
-  orgID: agent
+  orgID: fisco
+  groupId: 1
   connectSeconds: 10
   connectSleepPerMillis: 10
 # SDK连接的FISCO BCOS节点channel配置
-channelConnections:
-  caCertPath: classpath:ca.crt
-  clientKeystorePath: classpath:client.keystore
-  keystorePassWord: 123456
-  clientCertPassWord: 123456
-  groupAndConnectstr:
-    - groupId: 1
-      connectionsStr: 10.107.105.141:9821
-    - groupId: 2
-      connectionsStr: 10.107.105.141:9821
-
-# 配置国密算法开启/关闭开关(默认为0)
+groupChannelConnectionsConfig:
+  allChannelConnections:
+      - groupId: 1
+        connectionsStr: 10.107.105.138:30901
+      - groupId: 2
+        connectionsStr: 10.107.105.138:30901
+# guomi
 encryptType: 0
-logging:
-  level:
-    org.bcos: DEBUG

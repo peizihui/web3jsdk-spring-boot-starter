@@ -10,6 +10,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import javax.net.ssl.SSLException;
+
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = Application.class)
 public class ProxyServerTest {
@@ -19,7 +21,7 @@ public class ProxyServerTest {
     ChannelConnections channelConnections;
 
 	@Test
-	public  void proxyServerTest()  {
+	public  void proxyServerTest() throws SSLException {
 	 Server server =	new Server();
 	 server.setRemoteConnections(channelConnections);
 	 server.setThreadPool(executor);

@@ -17,7 +17,6 @@ import java.time.format.DateTimeFormatter;
 @SpringBootTest(classes = Application.class)
 public class Channel2Client {
 
-
 	@Autowired
     Service service;
 

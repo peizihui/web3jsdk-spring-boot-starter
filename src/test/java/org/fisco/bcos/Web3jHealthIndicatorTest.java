@@ -20,23 +20,11 @@ public class Web3jHealthIndicatorTest {
     Web3j web3j;
 
     @Test
-    public void  listen() throws IOException {
-        boolean listening = web3j.netListening().send().isListening();
-        assertTrue(listening);
-    }
-
-    @Test
     public void  getEthBlockNumber() throws IOException {
         BigInteger number =web3j.ethBlockNumber().send().getBlockNumber();
         assertTrue(number.intValue()>0);
         System.out.println(number);
     }
 
-    @Test
-    public void  getNetPeerCount() throws IOException {
-        BigInteger number =web3j.netPeerCount().send().getQuantity();
-        assertTrue(number.intValue()>0);
-        System.out.println(number);
-    }
 
 }

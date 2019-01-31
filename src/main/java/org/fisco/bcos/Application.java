@@ -18,7 +18,7 @@ public class Application {
     }
 
 
-   //if you need
+    //if you need
 //  @Bean
 //    public Server getServer(ThreadPoolTaskExecutor executor,ChannelConnections channelConnections) {
 //        return new Server(executor,channelConnections);
@@ -32,5 +32,4 @@ public class Application {
         channelEthereumService.setTimeout(10000);
         return Web3j.build(channelEthereumService);
     }
-
 }
