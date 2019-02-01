@@ -32,4 +32,44 @@ public class ServiceConfig {
     return channelService;
     }
 
+
+    public String getOrgID() {
+        return orgID;
+    }
+
+    public void setOrgID(String orgID) {
+        this.orgID = orgID;
+    }
+
+    public Integer getConnectSeconds() {
+        return connectSeconds;
+    }
+
+    public void setConnectSeconds(Integer connectSeconds) {
+        this.connectSeconds = connectSeconds;
+    }
+
+    public Integer getConnectSleepPerMillis() {
+        return connectSleepPerMillis;
+    }
+
+    public void setConnectSleepPerMillis(Integer connectSleepPerMillis) {
+        this.connectSleepPerMillis = connectSleepPerMillis;
+    }
+
+    public GroupChannelConnectionsConfig getAllChannelConnections() {
+        return allChannelConnections;
+    }
+
+    public void setAllChannelConnections(GroupChannelConnectionsConfig allChannelConnections) {
+        this.allChannelConnections = allChannelConnections;
+    }
+
+    public static int getGroupId() {
+        return groupId;
+    }
+
+    public static void setGroupId(int groupId) {
+        ServiceConfig.groupId = groupId;
+    }
 }

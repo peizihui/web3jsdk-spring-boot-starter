@@ -48,7 +48,7 @@ public class BlockTest {
 
     @Test
     public void getBlockNumber() throws IOException {
-        EthBlock.Block block=  web3j.ethGetBlockByNumber(DefaultBlockParameter.valueOf(new BigInteger("1")), true).send().getBlock();
+        EthBlock.Block block=  web3j.ethGetBlockByNumber(DefaultBlockParameter.valueOf(new BigInteger("0")), true).send().getBlock();
        assertEquals( block.getNonce(),new BigInteger("0"));
         assertTrue( block.getNumber().intValue()>=0);
     }

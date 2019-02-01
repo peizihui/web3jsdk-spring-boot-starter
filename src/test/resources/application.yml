@@ -12,3 +12,6 @@ groupChannelConnectionsConfig:
         connectionsStr: 10.107.105.138:30901
 # guomi
 encryptType: 0
+logging:
+  level:
+    root: INFO

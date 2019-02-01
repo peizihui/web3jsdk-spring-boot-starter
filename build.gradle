@@ -26,12 +26,11 @@ repositories {
 
 dependencies {
     compile 'org.fisco-bcos:web3sdk:2.0.1'
-    compile 'org.slf4j:slf4j-api:1.7.25'
     compile 'org.projectlombok:lombok:1.16.20'
     compile "org.springframework.boot:spring-boot-autoconfigure",
             "org.springframework.boot:spring-boot-actuator",
-            "org.springframework.boot:spring-boot-configuration-processor",
-    compile ("org.springframework.boot:spring-boot-starter") {
+            "org.springframework.boot:spring-boot-configuration-processor"
+    compile ("org.springframework.boot:spring-boot-starter"){
         exclude module: 'commons-logging'
     }
 
