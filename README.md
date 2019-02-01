@@ -6,7 +6,7 @@
 
     开始开发前，您需要配置 application.yml。配置类似于web3sdk项目配置。只需把application.xml修改成application.yml。
     配置如下图：
-    ![配置](./user/images/springboot.png)
+    ![配置](./images/springboot.png)
     配置参考FISCO-BCOS web3sdk项目[https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/web3sdk/config_web3sdk.html](https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/web3sdk/config_web3sdk.html)。
 
     这样您可以直接在你的项目里注入web3j
