@@ -2,7 +2,7 @@
 
 - 如果您对wec3sdk项目还不太了解，请查看[https://github.com/FISCO-BCOS/web3sdk](https://github.com/FISCO-BCOS/web3sdk)。
 - 如果对spring boot还不太了解，请查看[Spring Boot Application](https://spring.io/guides/gs/spring-boot/)
------------------
+
 #### 1.1使用指南
 
   您可以拉代码直接在此项目上开发(删除test文件下的测试案例即可)。我们在test下面提供基本测试案例，保证你能成功调用智能合约。
@@ -11,11 +11,8 @@
     springboot项目配置唯一不同是需把application.xml修改成application.yml。
  application.yml配置如下图：
 
-  ![springboot.png](./images/springboot.png)
+  ![springboot.png](./images/springboot.png) 
 
-
-
-----------------------
   #### 1.2 编译使用：
   本项目提供了丰富的测试案例和功能，您也可以直接下载代码，使用基本功能。流程如下：
 
