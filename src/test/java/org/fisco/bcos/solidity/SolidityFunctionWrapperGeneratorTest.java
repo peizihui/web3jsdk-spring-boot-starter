@@ -20,8 +20,8 @@ public class SolidityFunctionWrapperGeneratorTest  {
         String binFile1 =  new ClassPathResource("solidity/HelloWorld.bin").getFile().getAbsolutePath();
         String abiFile1 =  new ClassPathResource("solidity/HelloWorld.abi").getFile().getAbsolutePath();
         SolidityFunctionWrapperGenerator.main(Arrays.asList(
-                binFile1,
-                abiFile1,
+               "-b", binFile1,
+                "-a", abiFile1,
                 "-p", packageName,
                 "-o", tempDirPath
         ).toArray(new String[0]));
