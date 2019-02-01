@@ -1,4 +1,4 @@
-### 此项目是[FISCO-BCOS web3sdk](https://github.com/FISCO-BCOS/web3sdk)的spring boot版本demo;
+#### 此项目是[FISCO-BCOS web3sdk](https://github.com/FISCO-BCOS/web3sdk)的spring boot版本demo;
 
 - 如果您对wec3sdk项目还不太了解，请查看[https://github.com/FISCO-BCOS/web3sdk](https://github.com/FISCO-BCOS/web3sdk)。
 - 如果对spring boot还不太了解，请查看[Spring Boot Application](https://spring.io/guides/gs/spring-boot/)
@@ -11,7 +11,7 @@
     springboot项目配置唯一不同是需把application.xml修改成application.yml。
  application.yml配置如下图：
 
-  ![springboot.png](http://wiki.weoa.com/uploads/images/gallery/2019-02-Feb/scaled-840-0/MFkkpcUCJq1i0zWO-springboot.png)
+  ![springboot.png](./images/springboot.png)
 
 
 
