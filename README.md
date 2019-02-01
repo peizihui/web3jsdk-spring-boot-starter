@@ -10,10 +10,6 @@
  
     ```@Autowired```
 
-    ``` private Web3j web3j```; 
-
-- 项目fisco-sloc文件下的 fisco-sloc.exe(windows环境下)可以帮您把sol文件转换成abi文件。
-
-    参考命令（git命令行）： ```./fisco-solc.exe HelloWorld.sol --bin --abi -o output```。
+    ``` private Web3j web3j```;
 
 - 项目中SolidityFunctionWrapperGeneratorTest 测试类可以帮你生成把abi文件转换成相应Java类。
