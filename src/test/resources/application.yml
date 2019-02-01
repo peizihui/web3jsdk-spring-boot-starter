@@ -1,14 +1,14 @@
+encryptType: 0
+groupChannelConnectionsConfig:
+  allChannelConnections:
+  - groupId: 1
+    connectionsStr: 10.107.105.138:30901
+  - groupId: 2
+    connectionsStr: 10.107.105.138:30901
+                      10.107.105.138:30904
 service:
   orgID: fisco
   groupId: 1
   connectSeconds: 10
   connectSleepPerMillis: 10
-# SDK连接的FISCO BCOS节点channel配置
-groupChannelConnectionsConfig:
-  allChannelConnections:
-      - groupId: 1
-        connectionsStr: 10.107.105.138:30901
-      - groupId: 2
-        connectionsStr: 10.107.105.138:30901
-# guomi
-encryptType: 0
+
