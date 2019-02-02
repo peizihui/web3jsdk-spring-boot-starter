@@ -3,7 +3,7 @@
 - 如果您对wec3sdk项目还不太了解，请查看[https://github.com/FISCO-BCOS/web3sdk](https://github.com/FISCO-BCOS/web3sdk)。
 - 如果对spring boot还不太了解，请查看[Spring Boot Application](https://spring.io/guides/gs/spring-boot/)
 
-### 1.1 使用指南
+### 1.1 快速启动
 
   您可以拉代码直接在此项目上开发(删除test文件下的测试案例即可)。我们在test下面提供基本测试案例，保证你能成功调用智能合约。
 
