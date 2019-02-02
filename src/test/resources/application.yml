@@ -2,10 +2,13 @@ encryptType: 0
 groupChannelConnectionsConfig:
   allChannelConnections:
   - groupId: 1
-    connectionsStr: 10.107.105.138:30901
+    connectionsStr:
+                    - 10.107.105.138:30901
+                    - 10.107.105.138:30904
   - groupId: 2
-    connectionsStr: 10.107.105.138:30901
-                      10.107.105.138:30904
+    connectionsStr:
+                    - 10.107.105.138:30901
+                    - 10.107.105.138:30904
 service:
   orgID: fisco
   groupId: 1
