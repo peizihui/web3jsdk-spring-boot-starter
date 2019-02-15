@@ -20,12 +20,15 @@ targetCompatibility = 1.8
 
 
 repositories {
+    maven {
+        url "http://maven.aliyun.com/nexus/content/groups/public/"
+    }
     maven { url "https://dl.bintray.com/ethereum/maven/" }
     mavenCentral()
 }
 
 dependencies {
-    compile 'org.fisco-bcos:web3sdk:2.0.1'
+    compile 'org.fisco-bcos:web3sdk:2.0.2'
     compile 'org.projectlombok:lombok:1.16.20'
     compile "org.springframework.boot:spring-boot-autoconfigure",
             "org.springframework.boot:spring-boot-actuator",

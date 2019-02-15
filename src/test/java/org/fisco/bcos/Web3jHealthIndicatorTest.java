@@ -21,7 +21,7 @@ public class Web3jHealthIndicatorTest {
 
     @Test
     public void  getEthBlockNumber() throws IOException {
-        BigInteger number =web3j.ethBlockNumber().send().getBlockNumber();
+        BigInteger number =web3j.getBlockNumber().send().getBlockNumber();
         assertTrue(number.intValue()>0);
         System.out.println(number);
     }

@@ -9,7 +9,9 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = Application.class)
@@ -23,7 +25,7 @@ public class Channel2Server {
 
 		
 		String topic = "topic";
-		List<String> topics = new ArrayList<String>();
+		Set<String> topics = new HashSet<>();
 		topics.add(topic);
 		service.setTopics(topics);
 		

@@ -1,14 +1,12 @@
 package org.fisco.bcos;
 
 
-import org.fisco.bcos.Application;
 import org.fisco.bcos.web3j.crypto.Credentials;
 import org.fisco.bcos.web3j.crypto.gm.GenCredential;
 import org.fisco.bcos.web3j.protocol.Web3j;
 import org.fisco.bcos.web3j.protocol.core.DefaultBlockParameter;
-import org.fisco.bcos.web3j.protocol.core.methods.response.EthBlock;
+import org.fisco.bcos.web3j.protocol.core.methods.response.BcosBlock;
 import org.fisco.bcos.web3j.protocol.core.methods.response.TransactionReceipt;
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -19,7 +17,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 import java.io.IOException;
 import java.math.BigInteger;
 
-import static java.lang.System.exit;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 @RunWith(SpringRunner.class)
@@ -48,8 +45,8 @@ public class BlockTest {
 
     @Test
     public void getBlockNumber() throws IOException {
-        EthBlock.Block block=  web3j.ethGetBlockByNumber(DefaultBlockParameter.valueOf(new BigInteger("0")), true).send().getBlock();
-       assertEquals( block.getNonce(),new BigInteger("0"));
+        BcosBlock.Block block=  web3j.getBlockByNumber(DefaultBlockParameter.valueOf(new BigInteger("0")), true).send().getBlock();
+         assertEquals( block.getNonce(),new BigInteger("0"));
         assertTrue( block.getNumber().intValue()>=0);
     }
     @Test
