@@ -28,7 +28,10 @@ repositories {
 }
 
 dependencies {
-    compile 'org.fisco-bcos:web3sdk:2.0.2'
+    compile ("org.fisco-bcos:web3sdk:2.0.2"){
+        exclude module: 'solcJ-all'
+    }
+    compile	'org.ethereum:solcJ-all:0.5.2'
     compile 'org.projectlombok:lombok:1.16.20'
     compile "org.springframework.boot:spring-boot-autoconfigure",
             "org.springframework.boot:spring-boot-actuator",
